@@ -1,18 +1,18 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { FaHome, FaVideo, FaFire, FaBell, FaMusic, FaGamepad, FaFilm } from 'react-icons/fa'; // Importing icons
-
+import { Link } from 'react-router-dom';
 const SideBar = () => {
   const isMenuOpen = useSelector((store) => store.app.isMenuOpen);
 
   if (!isMenuOpen) return null;
 
   return (
-    <div className='w-48 shadow-lg pt-5 pl-5 fixed top-0 left-0 h-full bg-white z-20'>
+    <div className='w-48 shadow-lg pt-28 pl-5 fixed top-0 left-0 h-full bg-white z-20'>
       <h1 className='font-bold text-lg mb-2'>Menu</h1>
       <ul className="space-y-2">
         <li className="flex items-center py-2 px-2 hover:bg-gray-200 cursor-pointer rounded">
-          <FaHome className='mr-2' /> Home
+          <FaHome className='mr-2' /> <Link to ="/">Home</Link>
         </li>
         <li className="flex items-center py-2 px-2 hover:bg-gray-200 cursor-pointer rounded">
           <FaFire className='mr-2' /> Trending
