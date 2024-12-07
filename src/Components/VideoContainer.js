@@ -20,7 +20,7 @@ const VideoContainer = () => {
  setVideos(json.items)
   }
   return (
-    <div className={` flex  flex-wrap gap-3 mt-5  transition-all duration-300 scroll-smooth ${isMenuOpen ? 'pl-52' : 'pl-40'}`}>
+    <div className={` md:flex flex-wrap gap-3 mt-5  transition-all duration-300 scroll-smooth ${isMenuOpen ? 'pl-52' : 'pl-40'}`}>
     {videos.map (video => <Link to ={"/watch?v="+video.id}>
     <VideoCard  key={video.id} info ={video}/>
      </Link>

@@ -55,7 +55,7 @@ const getSearchSuggestions = async ()=>{
   };
 
   return (
-    <div className="w-full bg-white shadow-lg top-0 fixed z-50">
+    <div className="w-full bg-white shadow-lg top-0 fixed z-50 ">
       <div className="grid grid-flow-col p-2 items-center max-w-screen-xl mx-auto">
         {/* Menu Icon and Logo */}
         <div className="flex items-center col-span-1">
@@ -68,7 +68,7 @@ const getSearchSuggestions = async ()=>{
           </button>
           <a href="/">
             <img
-              className="w-32 ml-5"
+              className="  w-20  md:w-32 ml-5 "
               alt="logo"
               src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo-2017-present.jpg"
             />
@@ -76,7 +76,7 @@ const getSearchSuggestions = async ()=>{
         </div>
 
         {/* Search Bar */}
-        <div className="col-span-10 flex justify-center relative">
+        <div className="col-span-10 flex justify-center relative sm:col-span-7">
   <form className="flex w-full max-w-xl"> 
     {/* Input field */}
     <input
@@ -97,7 +97,7 @@ const getSearchSuggestions = async ()=>{
   </form>
 
   {/* Suggestion List */}
-  <div className="absolute top-full left-40 w-full max-w-xl bg-white border border-gray-300 rounded-lg shadow-lg z-10">
+  <div className="absolute top-full left-38 w-full max-w-xl bg-white border border-gray-300 rounded-lg shadow-lg z-10">
     <ul className="divide-y divide-gray-200">
       {suggestions.map((s, index) => (
         <li key={index} className="px-4 py-2 cursor-pointer hover:bg-gray-100">
